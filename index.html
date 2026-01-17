@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="zh-CN" itemscope itemtype="https://schema.org/WebPage">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+  <!-- Primary Meta Tags -->
+  <title>FortiGate SD-WAN 网络健康监控系统 | 实时监控 · 智能告警 · 可视化分析</title>
+  <meta name="title" content="FortiGate SD-WAN 网络健康监控系统 | 实时监控 · 智能告警 · 可视化分析" />
+  <meta name="description" content="企业级 FortiGate SD-WAN 健康监控解决方案。24/7 实时监控网络延迟、抖动、丢包率，智能阈值告警，多渠道通知（邮件/Webhook），历史趋势可视化分析。支持多接口、多线路统一管理。" />
+  <meta name="keywords" content="FortiGate监控,SD-WAN监控,网络健康检查,网络监控系统,FortiGate健康检查,SD-WAN Health Check,网络延迟监控,丢包率监控,带宽监控,网络告警系统,Fortinet监控,企业网络监控,网络运维工具,Network Monitoring,SD-WAN Analytics" />
+  <meta name="author" content="Jason Zhang" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+  <meta name="googlebot" content="index, follow" />
+  <meta name="bingbot" content="index, follow" />
+  <meta name="theme-color" content="#0f172a" />
+  <meta name="color-scheme" content="light dark" />
+  <meta name="generator" content="Custom Build" />
+  <meta name="format-detection" content="telephone=no" />
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://network-monitor.junxinzhang.com/" />
+
+  <!-- Language Alternates -->
+  <link rel="alternate" hreflang="zh-CN" href="https://network-monitor.junxinzhang.com/" />
+  <link rel="alternate" hreflang="x-default" href="https://network-monitor.junxinzhang.com/" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://network-monitor.junxinzhang.com/" />
+  <meta property="og:site_name" content="网络健康监控中心" />
+  <meta property="og:title" content="FortiGate SD-WAN 网络健康监控系统 | 实时监控 · 智能告警" />
+  <meta property="og:description" content="企业级 FortiGate SD-WAN 健康监控解决方案。24/7 实时监控网络延迟、抖动、丢包率，智能阈值告警，历史趋势可视化分析。" />
+  <meta property="og:image" content="https://network-monitor.junxinzhang.com/assets/screenshot.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="FortiGate SD-WAN 网络健康监控系统仪表盘截图" />
+  <meta property="og:locale" content="zh_CN" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://network-monitor.junxinzhang.com/" />
+  <meta name="twitter:title" content="FortiGate SD-WAN 网络健康监控系统" />
+  <meta name="twitter:description" content="企业级网络监控解决方案：实时状态监控、智能告警、带宽分析、历史趋势可视化。" />
+  <meta name="twitter:image" content="https://network-monitor.junxinzhang.com/assets/screenshot.png" />
+  <meta name="twitter:image:alt" content="FortiGate SD-WAN 网络健康监控系统仪表盘" />
+  <meta name="twitter:creator" content="@jasonzhang2022" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png" />
+  <link rel="manifest" href="manifest.json" />
+
+  <!-- Preconnect for performance -->
+  <link rel="preconnect" href="https://cdn.tailwindcss.com" />
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+  <link rel="dns-prefetch" href="https://cdn.tailwindcss.com" />
+  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net" />
+
+  <!-- Stylesheets -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" defer></script>
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://network-monitor.junxinzhang.com/#organization",
+        "name": "网络健康监控中心",
+        "alternateName": "FortiGate SD-WAN Monitor",
+        "url": "https://network-monitor.junxinzhang.com/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://network-monitor.junxinzhang.com/assets/favicon.svg"
+        },
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "email": "jason2023zhang@gmail.com",
+          "contactType": "sales"
+        },
+        "sameAs": [
+          "https://github.com/jasonzhang2022",
+          "https://junxinzhang.com"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://network-monitor.junxinzhang.com/#website",
+        "url": "https://network-monitor.junxinzhang.com/",
+        "name": "FortiGate SD-WAN 网络健康监控系统",
+        "description": "企业级 FortiGate SD-WAN 健康监控解决方案",
+        "publisher": {
+          "@id": "https://network-monitor.junxinzhang.com/#organization"
+        },
+        "inLanguage": "zh-CN"
+      },
+      {
+        "@type": "SoftwareApplication",
+        "@id": "https://network-monitor.junxinzhang.com/#software",
+        "name": "FortiGate SD-WAN 网络健康监控系统",
+        "alternateName": "Network Health Monitor",
+        "description": "企业级 FortiGate SD-WAN 健康监控解决方案，提供 24/7 实时监控、智能告警、历史数据可视化分析功能。",
+        "applicationCategory": "NetworkApplication",
+        "operatingSystem": "Linux, Windows, macOS",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "CNY",
+          "availability": "https://schema.org/InStock"
+        },
+        "featureList": [
+          "实时健康状态监控",
+          "智能阈值告警",
+          "带宽利用率分析",
+          "网络质量趋势图",
+          "多渠道告警通知",
+          "数据持久化存储"
+        ],
+        "screenshot": "https://network-monitor.junxinzhang.com/assets/screenshot.png",
+        "softwareVersion": "1.0",
+        "author": {
+          "@id": "https://network-monitor.junxinzhang.com/#organization"
+        }
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://network-monitor.junxinzhang.com/#webpage",
+        "url": "https://network-monitor.junxinzhang.com/",
+        "name": "FortiGate SD-WAN 网络健康监控系统 | 实时监控 · 智能告警 · 可视化分析",
+        "isPartOf": {
+          "@id": "https://network-monitor.junxinzhang.com/#website"
+        },
+        "about": {
+          "@id": "https://network-monitor.junxinzhang.com/#software"
+        },
+        "description": "企业级 FortiGate SD-WAN 健康监控解决方案。24/7 实时监控网络延迟、抖动、丢包率，智能阈值告警，历史趋势可视化分析。",
+        "breadcrumb": {
+          "@id": "https://network-monitor.junxinzhang.com/#breadcrumb"
+        },
+        "inLanguage": "zh-CN",
+        "potentialAction": [
+          {
+            "@type": "ReadAction",
+            "target": ["https://network-monitor.junxinzhang.com/"]
+          }
+        ]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://network-monitor.junxinzhang.com/#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "首页",
+            "item": "https://network-monitor.junxinzhang.com/"
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://network-monitor.junxinzhang.com/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "为什么需要专业的 FortiGate SD-WAN 监控系统？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "传统方式下，SD-WAN 链路故障往往等到用户投诉才发现，缺乏历史数据分析，告警机制不完善。专业监控系统可实现实时监控、秒级告警、完整的历史数据存储和趋势可视化，大幅提升网络运维效率。"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "网络健康监控系统支持哪些监控指标？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "系统支持监控延迟（Latency）、抖动（Jitter）、丢包率（Packet Loss）、带宽利用率、接口在线状态、会话数等关键网络质量指标，并支持自定义告警阈值。"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "系统支持哪些告警通知方式？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "支持邮件（SMTP）、Microsoft Graph API、Webhook 等多种通知方式。内置告警冷却机制，避免重复通知，确保关键告警及时送达。"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "如何部署 FortiGate 网络健康监控系统？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "系统基于 Node.js 开发，支持 Linux、Windows、macOS 平台。只需安装 Node.js 环境，配置 FortiGate 连接信息和告警参数即可运行。支持 Docker 部署，也可作为系统服务运行。"
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body class="antialiased">
+
+<header class="sticky top-0 z-40 bg-slate-900/95 backdrop-blur-md border-b border-slate-700">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+    <div class="flex items-center gap-4">
+      <div class="flex items-center gap-2">
+        <div class="flex gap-1">
+          <span class="w-3 h-3 rounded-sm bg-amber-400"></span>
+          <span class="w-3 h-3 rounded-sm bg-emerald-400"></span>
+        </div>
+        <div class="flex gap-0.5">
+          <span class="w-2 h-4 bg-sky-400"></span>
+          <span class="w-2 h-6 bg-sky-500"></span>
+          <span class="w-2 h-5 bg-sky-400"></span>
+        </div>
+      </div>
+      <div class="text-xl font-bold text-white">网络健康监控中心</div>
+    </div>
+    <nav class="hidden md:flex items-center gap-6 text-sm text-slate-300" role="navigation" aria-label="主导航">
+      <a href="#why" class="hover:text-emerald-400 transition">痛点</a>
+      <a href="#features" class="hover:text-emerald-400 transition">功能</a>
+      <a href="#dashboard" class="hover:text-emerald-400 transition">仪表盘</a>
+      <a href="#architecture" class="hover:text-emerald-400 transition">架构</a>
+      <a href="#faq" class="hover:text-emerald-400 transition">FAQ</a>
+      <a href="#contact" class="px-4 py-2 border border-emerald-500 text-emerald-400 rounded-md hover:bg-emerald-500/10 transition">联系咨询</a>
+    </nav>
+
+    <button id="menu-btn" class="mobile-menu-btn md:hidden" aria-label="打开导航菜单" aria-expanded="false">
+      <i class="ri-menu-line text-xl text-white"></i>
+    </button>
+
+    <div id="mobile-nav" class="mobile-nav md:hidden text-slate-300 text-sm" role="navigation" aria-label="移动端导航">
+      <a href="#why">痛点</a>
+      <a href="#features">功能</a>
+      <a href="#dashboard">仪表盘</a>
+      <a href="#architecture">架构</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact" class="text-emerald-400 font-medium">联系咨询</a>
+    </div>
+
+  </div>
+</header>
+
+<main>
+<!-- Hero Section -->
+<section class="w-full bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900 py-16 lg:py-24">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+    <div data-aos="fade-right" class="order-2 lg:order-1">
+      <div class="badge inline-block animate-slide-in">企业级方案</div>
+      <h1 class="mt-6 text-3xl sm:text-4xl lg:text-5xl font-extrabold hero-gradient leading-tight">
+        FortiGate SD-WAN<br/>实时健康监控
+      </h1>
+      <p class="mt-6 text-base sm:text-lg text-slate-400 leading-relaxed">
+        一站式网络质量监控平台：实时采集延迟、抖动、丢包率指标 → 智能阈值告警 → 历史数据可视化分析 → 邮件/Webhook多渠道通知
+      </p>
+
+      <div class="mt-8 flex flex-col sm:flex-row flex-wrap gap-4">
+        <a href="#contact"
+           class="px-6 py-3 rounded-md bg-emerald-500 text-white shadow-lg hover:bg-emerald-600 transition text-center">
+           咨询了解更多
+        </a>
+        <a href="#dashboard"
+           class="px-6 py-3 rounded-md border border-slate-600 text-slate-300 hover:bg-slate-700/50 transition flex items-center gap-2 justify-center">
+           <i class="ri-eye-line"></i> 查看演示
+        </a>
+      </div>
+
+      <div class="mt-10 grid grid-cols-2 sm:grid-cols-4 gap-4 text-center">
+        <div class="stat-card">
+          <div class="text-2xl font-bold text-emerald-400">24/7</div>
+          <div class="text-xs text-slate-500 mt-1">全天候监控</div>
+        </div>
+        <div class="stat-card">
+          <div class="text-2xl font-bold text-sky-400">&lt;1s</div>
+          <div class="text-xs text-slate-500 mt-1">告警响应</div>
+        </div>
+        <div class="stat-card">
+          <div class="text-2xl font-bold text-amber-400">99.9%</div>
+          <div class="text-xs text-slate-500 mt-1">可用性保障</div>
+        </div>
+        <div class="stat-card">
+          <div class="text-2xl font-bold text-violet-400">N+</div>
+          <div class="text-xs text-slate-500 mt-1">多接口支持</div>
+        </div>
+      </div>
+    </div>
+
+    <div data-aos="fade-left" class="order-1 lg:order-2">
+      <div class="relative">
+        <div class="absolute -inset-4 bg-gradient-to-r from-emerald-500/20 via-sky-500/20 to-violet-500/20 rounded-2xl blur-xl"></div>
+        <img src="assets/screenshot.png"
+             alt="FortiGate SD-WAN 网络健康监控系统仪表盘界面截图 - 显示实时状态、延迟、丢包率等监控指标"
+             title="网络健康监控中心实时监控仪表盘"
+             width="1200"
+             height="800"
+             loading="eager"
+             fetchpriority="high"
+             class="relative rounded-xl shadow-2xl border border-slate-700 w-full"
+             itemprop="image">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Pain Points Section -->
+<section id="why" class="max-w-7xl mx-auto px-6 py-16" data-aos="fade-up">
+  <h2 class="text-3xl font-semibold text-slate-800 text-center">为什么需要专业的网络监控</h2>
+  <p class="text-slate-600 text-center mt-4 max-w-2xl mx-auto">传统网络管理面临诸多挑战，我们的解决方案帮助您应对这些痛点</p>
+  <div class="mt-10 grid md:grid-cols-3 gap-6">
+    <div class="card flex items-start gap-4 animate-slide-in">
+      <div class="icon-box bg-rose-50">
+        <i class="ri-wifi-off-line text-2xl text-rose-500"></i>
+      </div>
+      <div>
+        <h3 class="font-medium text-slate-800">网络故障难以及时发现</h3>
+        <p class="mt-2 text-slate-600 text-sm">SD-WAN链路故障或质量下降时，往往等到用户投诉才发现问题，影响业务连续性。</p>
+      </div>
+    </div>
+    <div class="card flex items-start gap-4 animate-slide-in">
+      <div class="icon-box bg-amber-50">
+        <i class="ri-bar-chart-box-line text-2xl text-amber-500"></i>
+      </div>
+      <div>
+        <h3 class="font-medium text-slate-800">缺乏历史数据分析</h3>
+        <p class="mt-2 text-slate-600 text-sm">没有完整的网络质量历史记录，难以分析趋势、定位间歇性问题或规划容量。</p>
+      </div>
+    </div>
+    <div class="card flex items-start gap-4 animate-slide-in">
+      <div class="icon-box bg-sky-50">
+        <i class="ri-notification-off-line text-2xl text-sky-500"></i>
+      </div>
+      <div>
+        <h3 class="font-medium text-slate-800">告警机制不完善</h3>
+        <p class="mt-2 text-slate-600 text-sm">FortiGate原生告警能力有限，无法自定义阈值，告警通知渠道单一，响应不及时。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Features Section -->
+<section id="features" class="max-w-7xl mx-auto px-6 py-16 bg-slate-50 rounded-2xl" data-aos="fade-up">
+  <h2 class="text-3xl font-semibold text-slate-800 text-center mb-4">核心功能</h2>
+  <p class="text-slate-600 text-center mb-10 max-w-2xl mx-auto">全方位的网络健康监控能力，助力企业网络运维</p>
+  <div class="grid lg:grid-cols-2 gap-8">
+    <div class="space-y-6">
+      <div class="card flex items-start gap-4">
+        <div class="icon-box bg-emerald-50">
+          <i class="ri-pulse-line text-2xl text-emerald-600"></i>
+        </div>
+        <div>
+          <h3 class="font-medium text-slate-800">实时健康状态监控</h3>
+          <p class="mt-2 text-slate-600 text-sm">自动采集 FortiGate SD-WAN Health Check 数据，实时展示各接口的在线状态、延迟、抖动、丢包率等关键指标。</p>
+        </div>
+      </div>
+      <div class="card flex items-start gap-4">
+        <div class="icon-box bg-sky-50">
+          <i class="ri-speed-line text-2xl text-sky-600"></i>
+        </div>
+        <div>
+          <h3 class="font-medium text-slate-800">带宽利用率分析</h3>
+          <p class="mt-2 text-slate-600 text-sm">监控各线路的上传/下载带宽使用情况，直观显示利用率百分比，助力容量规划与成本优化。</p>
+        </div>
+      </div>
+      <div class="card flex items-start gap-4">
+        <div class="icon-box bg-violet-50">
+          <i class="ri-line-chart-line text-2xl text-violet-600"></i>
+        </div>
+        <div>
+          <h3 class="font-medium text-slate-800">网络质量趋势图</h3>
+          <p class="mt-2 text-slate-600 text-sm">支持6小时/24小时/7天多维度历史数据可视化，快速定位网络质量波动时间点与原因。</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="space-y-6">
+      <div class="card flex items-start gap-4">
+        <div class="icon-box bg-rose-50">
+          <i class="ri-alarm-warning-line text-2xl text-rose-600"></i>
+        </div>
+        <div>
+          <h3 class="font-medium text-slate-800">智能阈值告警</h3>
+          <p class="mt-2 text-slate-600 text-sm">自定义延迟、丢包率告警阈值，接口状态变更自动触发告警，支持告警冷却避免重复通知。</p>
+        </div>
+      </div>
+      <div class="card flex items-start gap-4">
+        <div class="icon-box bg-amber-50">
+          <i class="ri-mail-send-line text-2xl text-amber-600"></i>
+        </div>
+        <div>
+          <h3 class="font-medium text-slate-800">多渠道通知</h3>
+          <p class="mt-2 text-slate-600 text-sm">支持邮件（SMTP）、Microsoft Graph API、Webhook 等多种通知方式，确保告警及时送达。</p>
+        </div>
+      </div>
+      <div class="card flex items-start gap-4">
+        <div class="icon-box bg-slate-100">
+          <i class="ri-database-2-line text-2xl text-slate-600"></i>
+        </div>
+        <div>
+          <h3 class="font-medium text-slate-800">数据持久化存储</h3>
+          <p class="mt-2 text-slate-600 text-sm">基于 SQLite 的轻量级数据存储，完整保留历史健康检查数据与告警记录，支持数据导出与分析。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Dashboard Preview Section -->
+<section id="dashboard" class="max-w-7xl mx-auto px-6 py-16" data-aos="fade-up">
+  <h2 class="text-3xl font-semibold text-slate-800 text-center mb-4">直观的监控仪表盘</h2>
+  <p class="text-slate-600 text-center mb-10 max-w-2xl mx-auto">深色主题设计，数据一目了然，支持自动刷新</p>
+
+  <div class="grid lg:grid-cols-3 gap-6 mb-10">
+    <div class="dashboard-feature-card">
+      <div class="flex items-center gap-3 mb-3">
+        <span class="w-3 h-3 rounded-full bg-emerald-400 animate-pulse"></span>
+        <span class="text-slate-700 font-medium">实时状态指示</span>
+      </div>
+      <p class="text-slate-600 text-sm">在线/离线状态实时更新，绿色标识正常，红色标识故障，快速掌握全局。</p>
+    </div>
+    <div class="dashboard-feature-card">
+      <div class="flex items-center gap-3 mb-3">
+        <i class="ri-dashboard-3-line text-xl text-sky-500"></i>
+        <span class="text-slate-700 font-medium">多指标卡片</span>
+      </div>
+      <p class="text-slate-600 text-sm">每个接口独立卡片显示延迟、丢包率、抖动、会话数、带宽等完整指标。</p>
+    </div>
+    <div class="dashboard-feature-card">
+      <div class="flex items-center gap-3 mb-3">
+        <i class="ri-refresh-line text-xl text-violet-500"></i>
+        <span class="text-slate-700 font-medium">自动刷新</span>
+      </div>
+      <p class="text-slate-600 text-sm">支持60秒自动刷新，数据实时更新，无需手动操作。</p>
+    </div>
+  </div>
+
+  <div class="relative">
+    <div class="absolute -inset-4 bg-gradient-to-r from-emerald-500/10 via-sky-500/10 to-violet-500/10 rounded-2xl blur-2xl"></div>
+    <img src="assets/screenshot.png"
+         alt="FortiGate SD-WAN 监控仪表盘完整界面 - 多接口状态卡片、带宽利用率图表、历史趋势分析"
+         title="网络健康监控中心 Web 界面预览"
+         width="1200"
+         height="800"
+         loading="lazy"
+         decoding="async"
+         class="relative rounded-xl shadow-xl border border-slate-200 w-full">
+  </div>
+</section>
+
+<!-- Architecture Section -->
+<section id="architecture" class="max-w-7xl mx-auto px-6 py-16 bg-slate-50 rounded-2xl" data-aos="fade-up">
+  <h2 class="text-3xl font-semibold text-slate-800 text-center mb-4">系统架构</h2>
+  <p class="text-slate-600 text-center mb-10 max-w-2xl mx-auto">模块化设计，轻量部署，易于扩展</p>
+
+  <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+    <div class="arch-card">
+      <div class="arch-step">1</div>
+      <h4 class="font-medium text-slate-800 mt-4">数据采集</h4>
+      <p class="mt-2 text-slate-600 text-sm">通过 Playwright 模拟浏览器登录 FortiGate，调用 SD-WAN Health Check API 获取原始数据。</p>
+      <div class="mt-4 flex items-center gap-2 text-xs text-slate-500">
+        <i class="ri-code-s-slash-line"></i>
+        <span>Playwright + Node.js</span>
+      </div>
+    </div>
+    <div class="arch-card">
+      <div class="arch-step">2</div>
+      <h4 class="font-medium text-slate-800 mt-4">数据存储</h4>
+      <p class="mt-2 text-slate-600 text-sm">将健康检查数据与告警记录持久化存储到 SQLite 数据库，支持历史查询与分析。</p>
+      <div class="mt-4 flex items-center gap-2 text-xs text-slate-500">
+        <i class="ri-database-line"></i>
+        <span>SQLite</span>
+      </div>
+    </div>
+    <div class="arch-card">
+      <div class="arch-step">3</div>
+      <h4 class="font-medium text-slate-800 mt-4">状态分析</h4>
+      <p class="mt-2 text-slate-600 text-sm">实时比对接口状态变化，检测质量指标是否超过阈值，智能判断是否需要触发告警。</p>
+      <div class="mt-4 flex items-center gap-2 text-xs text-slate-500">
+        <i class="ri-cpu-line"></i>
+        <span>状态机 + 阈值引擎</span>
+      </div>
+    </div>
+    <div class="arch-card">
+      <div class="arch-step">4</div>
+      <h4 class="font-medium text-slate-800 mt-4">告警通知</h4>
+      <p class="mt-2 text-slate-600 text-sm">状态异常时触发告警，支持邮件、Graph API、Webhook 等多渠道通知，包含告警冷却机制。</p>
+      <div class="mt-4 flex items-center gap-2 text-xs text-slate-500">
+        <i class="ri-notification-3-line"></i>
+        <span>SMTP / Graph API</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Comparison Section -->
+<section id="comparison" class="max-w-7xl mx-auto px-6 py-16" data-aos="fade-up">
+  <h2 class="text-3xl font-semibold text-slate-800 text-center mb-4">与传统方式对比</h2>
+  <p class="text-slate-600 text-center mb-10 max-w-2xl mx-auto">专业监控系统带来的显著优势</p>
+  <div class="scroll-x">
+    <table class="w-full border-collapse" role="table">
+      <caption class="sr-only">网络健康监控系统与传统管理对比表</caption>
+      <thead>
+        <tr>
+          <th scope="col">对比项</th>
+          <th scope="col">传统方式</th>
+          <th scope="col">网络健康监控中心</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>故障发现</td>
+          <td class="text-slate-500">用户投诉后被动发现</td>
+          <td class="text-emerald-600 font-medium">实时监控，秒级告警</td>
+        </tr>
+        <tr>
+          <td>历史数据</td>
+          <td class="text-slate-500">无记录或分散在日志中</td>
+          <td class="text-emerald-600 font-medium">完整存储，趋势可视化</td>
+        </tr>
+        <tr>
+          <td>告警通知</td>
+          <td class="text-slate-500">FortiGate 原生，功能有限</td>
+          <td class="text-emerald-600 font-medium">多渠道、自定义阈值、冷却机制</td>
+        </tr>
+        <tr>
+          <td>可视化</td>
+          <td class="text-slate-500">需登录 FortiGate 查看</td>
+          <td class="text-emerald-600 font-medium">独立 Web 界面，随时访问</td>
+        </tr>
+        <tr>
+          <td>多线路管理</td>
+          <td class="text-slate-500">逐个检查，效率低</td>
+          <td class="text-emerald-600 font-medium">统一视图，一目了然</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- Tech Stack Section -->
+<section class="max-w-7xl mx-auto px-6 py-16" data-aos="fade-up">
+  <h2 class="text-3xl font-semibold text-slate-800 text-center mb-10">技术栈</h2>
+  <div class="flex flex-wrap justify-center gap-6">
+    <div class="tech-badge">
+      <i class="ri-nodejs-fill text-green-600"></i>
+      <span>Node.js</span>
+    </div>
+    <div class="tech-badge">
+      <i class="ri-database-2-fill text-sky-600"></i>
+      <span>SQLite</span>
+    </div>
+    <div class="tech-badge">
+      <i class="ri-chrome-fill text-violet-600"></i>
+      <span>Playwright</span>
+    </div>
+    <div class="tech-badge">
+      <i class="ri-html5-fill text-orange-600"></i>
+      <span>HTML5</span>
+    </div>
+    <div class="tech-badge">
+      <i class="ri-css3-fill text-blue-600"></i>
+      <span>CSS3</span>
+    </div>
+    <div class="tech-badge">
+      <i class="ri-javascript-fill text-yellow-500"></i>
+      <span>JavaScript</span>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ Section - GEO Optimized -->
+<section id="faq" class="max-w-7xl mx-auto px-6 py-16" data-aos="fade-up" itemscope itemtype="https://schema.org/FAQPage">
+  <h2 class="text-3xl font-semibold text-slate-800 text-center mb-4">常见问题</h2>
+  <p class="text-slate-600 text-center mb-10 max-w-2xl mx-auto">关于 FortiGate SD-WAN 网络健康监控系统的常见问题解答</p>
+
+  <div class="max-w-3xl mx-auto space-y-4">
+    <details class="faq-item group" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" open>
+      <summary class="faq-question cursor-pointer list-none flex items-center justify-between p-4 bg-white rounded-lg border border-slate-200 hover:border-emerald-300 transition">
+        <span itemprop="name" class="font-medium text-slate-800">为什么需要专业的 FortiGate SD-WAN 监控系统？</span>
+        <i class="ri-arrow-down-s-line text-xl text-slate-400 group-open:rotate-180 transition-transform"></i>
+      </summary>
+      <div class="faq-answer p-4 bg-slate-50 rounded-b-lg border-x border-b border-slate-200" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+        <div itemprop="text" class="text-slate-600 text-sm leading-relaxed">
+          <p>传统网络管理方式存在三大痛点：</p>
+          <ul class="mt-2 space-y-1 list-disc list-inside">
+            <li><strong>故障发现滞后</strong>：SD-WAN 链路故障或质量下降时，往往等到用户投诉才发现问题</li>
+            <li><strong>缺乏历史数据</strong>：没有完整的网络质量历史记录，难以分析趋势和定位间歇性问题</li>
+            <li><strong>告警机制有限</strong>：FortiGate 原生告警能力有限，无法自定义阈值，通知渠道单一</li>
+          </ul>
+          <p class="mt-2">专业监控系统可实现 <strong>实时监控、秒级告警、完整历史数据存储和趋势可视化</strong>，将故障发现时间从小时级缩短到秒级。</p>
+        </div>
+      </div>
+    </details>
+
+    <details class="faq-item group" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+      <summary class="faq-question cursor-pointer list-none flex items-center justify-between p-4 bg-white rounded-lg border border-slate-200 hover:border-emerald-300 transition">
+        <span itemprop="name" class="font-medium text-slate-800">系统支持监控哪些网络指标？</span>
+        <i class="ri-arrow-down-s-line text-xl text-slate-400 group-open:rotate-180 transition-transform"></i>
+      </summary>
+      <div class="faq-answer p-4 bg-slate-50 rounded-b-lg border-x border-b border-slate-200" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+        <div itemprop="text" class="text-slate-600 text-sm leading-relaxed">
+          <p>系统全面监控 FortiGate SD-WAN Health Check 的所有关键指标：</p>
+          <ul class="mt-2 space-y-1 list-disc list-inside">
+            <li><strong>延迟 (Latency)</strong>：网络往返时间，反映网络响应速度</li>
+            <li><strong>抖动 (Jitter)</strong>：延迟变化程度，影响实时应用质量</li>
+            <li><strong>丢包率 (Packet Loss)</strong>：数据包丢失比例，直接影响传输质量</li>
+            <li><strong>带宽利用率</strong>：上传/下载带宽使用情况和利用率百分比</li>
+            <li><strong>接口状态</strong>：在线/离线状态实时监控</li>
+            <li><strong>会话数</strong>：当前活跃连接数量</li>
+          </ul>
+          <p class="mt-2">所有指标均支持 <strong>自定义告警阈值</strong>，当指标超过设定值时自动触发告警。</p>
+        </div>
+      </div>
+    </details>
+
+    <details class="faq-item group" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+      <summary class="faq-question cursor-pointer list-none flex items-center justify-between p-4 bg-white rounded-lg border border-slate-200 hover:border-emerald-300 transition">
+        <span itemprop="name" class="font-medium text-slate-800">告警通知支持哪些方式？</span>
+        <i class="ri-arrow-down-s-line text-xl text-slate-400 group-open:rotate-180 transition-transform"></i>
+      </summary>
+      <div class="faq-answer p-4 bg-slate-50 rounded-b-lg border-x border-b border-slate-200" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+        <div itemprop="text" class="text-slate-600 text-sm leading-relaxed">
+          <p>系统支持多种告警通知渠道，确保关键信息及时送达：</p>
+          <ul class="mt-2 space-y-1 list-disc list-inside">
+            <li><strong>邮件通知 (SMTP)</strong>：支持 Gmail、Outlook、QQ邮箱等主流邮件服务</li>
+            <li><strong>Microsoft Graph API</strong>：企业级 Microsoft 365 集成</li>
+            <li><strong>Webhook</strong>：可对接钉钉、企业微信、Slack 等协作平台</li>
+          </ul>
+          <p class="mt-2">系统内置 <strong>告警冷却机制</strong>（默认5分钟），避免同一问题重复告警造成信息轰炸。支持 <strong>状态恢复通知</strong>，当问题解决后自动发送恢复通知。</p>
+        </div>
+      </div>
+    </details>
+
+    <details class="faq-item group" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+      <summary class="faq-question cursor-pointer list-none flex items-center justify-between p-4 bg-white rounded-lg border border-slate-200 hover:border-emerald-300 transition">
+        <span itemprop="name" class="font-medium text-slate-800">如何部署网络健康监控系统？</span>
+        <i class="ri-arrow-down-s-line text-xl text-slate-400 group-open:rotate-180 transition-transform"></i>
+      </summary>
+      <div class="faq-answer p-4 bg-slate-50 rounded-b-lg border-x border-b border-slate-200" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+        <div itemprop="text" class="text-slate-600 text-sm leading-relaxed">
+          <p>系统采用轻量级架构，部署简单快速：</p>
+          <ul class="mt-2 space-y-1 list-disc list-inside">
+            <li><strong>环境要求</strong>：Node.js 16+ 运行环境</li>
+            <li><strong>支持平台</strong>：Linux、Windows、macOS</li>
+            <li><strong>数据存储</strong>：SQLite（零配置，无需额外数据库服务）</li>
+            <li><strong>部署方式</strong>：支持直接运行、PM2 进程管理、Docker 容器化部署</li>
+          </ul>
+          <p class="mt-2"><strong>部署步骤</strong>：安装依赖 → 配置 .env 文件（FortiGate 地址、告警设置）→ 初始化数据库 → 启动监控服务。</p>
+        </div>
+      </div>
+    </details>
+
+    <details class="faq-item group" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+      <summary class="faq-question cursor-pointer list-none flex items-center justify-between p-4 bg-white rounded-lg border border-slate-200 hover:border-emerald-300 transition">
+        <span itemprop="name" class="font-medium text-slate-800">系统如何连接 FortiGate 设备？</span>
+        <i class="ri-arrow-down-s-line text-xl text-slate-400 group-open:rotate-180 transition-transform"></i>
+      </summary>
+      <div class="faq-answer p-4 bg-slate-50 rounded-b-lg border-x border-b border-slate-200" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+        <div itemprop="text" class="text-slate-600 text-sm leading-relaxed">
+          <p>系统通过 <strong>Playwright 浏览器自动化</strong> 技术连接 FortiGate：</p>
+          <ul class="mt-2 space-y-1 list-disc list-inside">
+            <li>模拟浏览器登录 FortiGate Web 管理界面</li>
+            <li>调用 <code class="bg-slate-200 px-1 rounded">/api/v2/monitor/virtual-wan/health-check</code> API 获取数据</li>
+            <li>自动维持登录会话，会话超时时自动重新认证</li>
+          </ul>
+          <p class="mt-2">这种方式的优势是 <strong>无需开启 FortiGate API 访问权限</strong>，只需提供管理员账号密码即可。系统会保持持久化浏览器会话，避免频繁登录。</p>
+        </div>
+      </div>
+    </details>
+
+    <details class="faq-item group" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+      <summary class="faq-question cursor-pointer list-none flex items-center justify-between p-4 bg-white rounded-lg border border-slate-200 hover:border-emerald-300 transition">
+        <span itemprop="name" class="font-medium text-slate-800">历史数据保留多长时间？</span>
+        <i class="ri-arrow-down-s-line text-xl text-slate-400 group-open:rotate-180 transition-transform"></i>
+      </summary>
+      <div class="faq-answer p-4 bg-slate-50 rounded-b-lg border-x border-b border-slate-200" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+        <div itemprop="text" class="text-slate-600 text-sm leading-relaxed">
+          <p>系统使用 SQLite 数据库存储所有历史数据：</p>
+          <ul class="mt-2 space-y-1 list-disc list-inside">
+            <li><strong>健康检查数据</strong>：默认永久保留，可通过脚本清理旧数据</li>
+            <li><strong>告警记录</strong>：完整保留所有告警历史和发送状态</li>
+            <li><strong>原始 JSON 数据</strong>：保留 API 返回的完整原始数据，便于后续分析</li>
+          </ul>
+          <p class="mt-2">Web 界面支持 <strong>6小时 / 24小时 / 7天</strong> 三种时间范围的趋势图查看。数据导出功能支持将历史数据导出为 CSV 或 JSON 格式进行离线分析。</p>
+        </div>
+      </div>
+    </details>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="max-w-7xl mx-auto px-6 py-16 bg-gradient-to-r from-emerald-600 to-sky-600 rounded-2xl text-center" data-aos="fade-up">
+  <h2 class="text-3xl font-semibold text-white mb-6">获取解决方案</h2>
+  <p class="text-emerald-100 mb-8 max-w-xl mx-auto">我们的网络健康监控中心可根据您的企业需求进行定制部署，欢迎联系咨询。</p>
+  <div class="flex flex-col sm:flex-row gap-4 justify-center">
+    <a href="mailto:jason2023zhang@gmail.com" class="px-8 py-4 bg-white text-emerald-600 rounded-md text-lg shadow-lg hover:bg-slate-50 transition inline-flex items-center justify-center gap-2">
+      <i class="ri-mail-line"></i> 邮件咨询
+    </a>
+  </div>
+</section>
+
+</main>
+
+<footer class="bg-slate-900 mt-16">
+  <div class="max-w-7xl mx-auto px-6 py-12 grid sm:grid-cols-2 md:grid-cols-4 gap-8 text-slate-400">
+    <div>
+      <div class="flex items-center gap-2 mb-4">
+        <div class="flex gap-1">
+          <span class="w-3 h-3 rounded-sm bg-amber-400"></span>
+          <span class="w-3 h-3 rounded-sm bg-emerald-400"></span>
+        </div>
+        <span class="text-white font-semibold">网络健康监控中心</span>
+      </div>
+      <p class="text-sm">企业级 FortiGate SD-WAN 健康监控解决方案，让网络运维更简单、更高效。</p>
+    </div>
+    <div>
+      <h3 class="font-semibold text-white mb-4">功能特性</h3>
+      <ul class="space-y-2 text-sm">
+        <li>实时状态监控</li>
+        <li>智能阈值告警</li>
+        <li>历史趋势分析</li>
+        <li>多渠道通知</li>
+      </ul>
+    </div>
+    <div>
+      <h3 class="font-semibold text-white mb-4">联系方式</h3>
+      <ul class="space-y-3 text-sm">
+        <li class="flex items-center gap-2">
+          <i class="ri-mail-line text-emerald-400"></i>
+          <a href="mailto:jason2023zhang@gmail.com" class="hover:text-emerald-400 transition">jason2023zhang@gmail.com</a>
+        </li>
+        <li class="flex items-center gap-2">
+          <i class="ri-wechat-line text-emerald-400"></i>
+          <span>winnielove2020</span>
+        </li>
+      </ul>
+    </div>
+    <div>
+      <h3 class="font-semibold text-white mb-4">关注我们</h3>
+      <div class="flex items-center gap-4 text-2xl mb-4">
+        <a href="https://github.com/jasonzhang2022" target="_blank" class="hover:text-emerald-400 transition" title="GitHub">
+          <i class="ri-github-fill"></i>
+        </a>
+        <a href="https://junxinzhang.com" target="_blank" class="hover:text-emerald-400 transition" title="Blog">
+          <i class="ri-earth-line"></i>
+        </a>
+        <div class="group relative">
+          <i class="ri-wechat-line hover:text-emerald-400 cursor-pointer" title="微信公众号"></i>
+          <div class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 w-36 bg-white border border-gray-200 rounded-lg p-2 shadow-lg opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none z-50">
+            <img src="assets/JustJason_wechat-qrcode.jpg" alt="微信公众号二维码" class="w-full h-auto rounded" />
+            <p class="text-xs text-center text-slate-600 mt-1">扫码关注公众号</p>
+          </div>
+        </div>
+      </div>
+      <p class="text-xs text-slate-500">扫码关注获取更多技术分享</p>
+    </div>
+  </div>
+  <div class="text-center text-sm text-slate-600 py-4 border-t border-slate-800">
+    &copy; <span id="copyright-year">2025</span> Just Jason. 网络健康监控中心. All rights reserved.
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+
+</body>
+</html>
