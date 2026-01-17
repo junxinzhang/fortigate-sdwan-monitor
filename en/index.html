@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="https://schema.org/WebPage">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+  <!-- Primary Meta Tags -->
+  <title>FortiGate SD-WAN Network Health Monitor | Real-time Monitoring · Smart Alerts · Visualization</title>
+  <meta name="title" content="FortiGate SD-WAN Network Health Monitor | Real-time Monitoring · Smart Alerts · Visualization" />
+  <meta name="description" content="Enterprise-grade FortiGate SD-WAN health monitoring solution. 24/7 real-time monitoring of network latency, jitter, packet loss. Intelligent threshold alerts, multi-channel notifications (Email/Webhook), historical trend visualization. Support for multi-interface, multi-link unified management." />
+  <meta name="keywords" content="FortiGate Monitor, SD-WAN Monitoring, Network Health Check, Network Monitoring System, FortiGate Health Check, SD-WAN Health Check, Network Latency Monitor, Packet Loss Monitor, Bandwidth Monitor, Network Alert System, Fortinet Monitoring, Enterprise Network Monitor, Network Operations Tools, Network Monitoring, SD-WAN Analytics" />
+  <meta name="author" content="Jason Zhang" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+  <meta name="googlebot" content="index, follow" />
+  <meta name="bingbot" content="index, follow" />
+  <meta name="theme-color" content="#0f172a" />
+  <meta name="color-scheme" content="light dark" />
+  <meta name="generator" content="Custom Build" />
+  <meta name="format-detection" content="telephone=no" />
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://network-monitor.junxinzhang.com/en/" />
+
+  <!-- Language Alternates -->
+  <link rel="alternate" hreflang="en" href="https://network-monitor.junxinzhang.com/en/" />
+  <link rel="alternate" hreflang="zh-CN" href="https://network-monitor.junxinzhang.com/" />
+  <link rel="alternate" hreflang="x-default" href="https://network-monitor.junxinzhang.com/" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://network-monitor.junxinzhang.com/en/" />
+  <meta property="og:site_name" content="Network Health Monitor" />
+  <meta property="og:title" content="FortiGate SD-WAN Network Health Monitor | Real-time Monitoring · Smart Alerts" />
+  <meta property="og:description" content="Enterprise-grade FortiGate SD-WAN health monitoring solution. 24/7 real-time monitoring of network latency, jitter, packet loss. Intelligent threshold alerts, historical trend visualization." />
+  <meta property="og:image" content="https://network-monitor.junxinzhang.com/assets/screenshot.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="FortiGate SD-WAN Network Health Monitor Dashboard Screenshot" />
+  <meta property="og:locale" content="en_US" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://network-monitor.junxinzhang.com/en/" />
+  <meta name="twitter:title" content="FortiGate SD-WAN Network Health Monitor" />
+  <meta name="twitter:description" content="Enterprise network monitoring solution: real-time status monitoring, smart alerts, bandwidth analysis, historical trend visualization." />
+  <meta name="twitter:image" content="https://network-monitor.junxinzhang.com/assets/screenshot.png" />
+  <meta name="twitter:image:alt" content="FortiGate SD-WAN Network Health Monitor Dashboard" />
+  <meta name="twitter:creator" content="@Jasonz9788" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg" />
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon-16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/apple-touch-icon.png" />
+  <link rel="manifest" href="../manifest.json" />
+
+  <!-- Preconnect for performance -->
+  <link rel="preconnect" href="https://cdn.tailwindcss.com" />
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+  <link rel="dns-prefetch" href="https://cdn.tailwindcss.com" />
+  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net" />
+
+  <!-- Stylesheets -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+  <link rel="stylesheet" href="../css/style.css" />
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" defer></script>
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://network-monitor.junxinzhang.com/#organization",
+        "name": "Network Health Monitor",
+        "alternateName": "FortiGate SD-WAN Monitor",
+        "url": "https://network-monitor.junxinzhang.com/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://network-monitor.junxinzhang.com/assets/favicon.svg"
+        },
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "email": "jason2023zhang@gmail.com",
+          "contactType": "sales"
+        },
+        "sameAs": [
+          "https://github.com/junxinzhang/fortigate-sdwan-monitor",
+          "https://junxinzhang.com"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://network-monitor.junxinzhang.com/en/#website",
+        "url": "https://network-monitor.junxinzhang.com/en/",
+        "name": "FortiGate SD-WAN Network Health Monitor",
+        "description": "Enterprise-grade FortiGate SD-WAN health monitoring solution",
+        "publisher": {
+          "@id": "https://network-monitor.junxinzhang.com/#organization"
+        },
+        "inLanguage": "en"
+      },
+      {
+        "@type": "SoftwareApplication",
+        "@id": "https://network-monitor.junxinzhang.com/#software",
+        "name": "FortiGate SD-WAN Network Health Monitor",
+        "alternateName": "Network Health Monitor",
+        "description": "Enterprise-grade FortiGate SD-WAN health monitoring solution with 24/7 real-time monitoring, intelligent alerts, and historical data visualization.",
+        "applicationCategory": "NetworkApplication",
+        "operatingSystem": "Linux, Windows, macOS",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD",
+          "availability": "https://schema.org/InStock"
+        },
+        "featureList": [
+          "Real-time health status monitoring",
+          "Intelligent threshold alerts",
+          "Bandwidth utilization analysis",
+          "Network quality trend charts",
+          "Multi-channel alert notifications",
+          "Data persistence storage"
+        ],
+        "screenshot": "https://network-monitor.junxinzhang.com/assets/screenshot.png",
+        "softwareVersion": "1.0",
+        "author": {
+          "@id": "https://network-monitor.junxinzhang.com/#organization"
+        }
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://network-monitor.junxinzhang.com/en/#webpage",
+        "url": "https://network-monitor.junxinzhang.com/en/",
+        "name": "FortiGate SD-WAN Network Health Monitor | Real-time Monitoring · Smart Alerts · Visualization",
+        "isPartOf": {
+          "@id": "https://network-monitor.junxinzhang.com/en/#website"
+        },
+        "about": {
+          "@id": "https://network-monitor.junxinzhang.com/#software"
+        },
+        "description": "Enterprise-grade FortiGate SD-WAN health monitoring solution. 24/7 real-time monitoring of network latency, jitter, packet loss. Intelligent threshold alerts, historical trend visualization.",
+        "breadcrumb": {
+          "@id": "https://network-monitor.junxinzhang.com/en/#breadcrumb"
+        },
+        "inLanguage": "en",
+        "potentialAction": [
+          {
+            "@type": "ReadAction",
+            "target": ["https://network-monitor.junxinzhang.com/en/"]
+          }
+        ]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://network-monitor.junxinzhang.com/en/#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://network-monitor.junxinzhang.com/en/"
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://network-monitor.junxinzhang.com/en/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Why do I need a professional FortiGate SD-WAN monitoring system?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Traditional methods often discover SD-WAN link failures only after user complaints, lack historical data analysis, and have inadequate alerting mechanisms. A professional monitoring system enables real-time monitoring, instant alerts, complete historical data storage, and trend visualization, significantly improving network operations efficiency."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What monitoring metrics does the Network Health Monitor support?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The system monitors Latency, Jitter, Packet Loss, Bandwidth Utilization, Interface Online Status, Session Count, and other key network quality metrics. It also supports customizable alert thresholds."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What alert notification methods does the system support?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Supports Email (SMTP), Microsoft Graph API, Webhook, and other notification channels. Built-in alert cooldown mechanism prevents duplicate notifications and ensures critical alerts are delivered promptly."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do I deploy the FortiGate Network Health Monitor?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The system is built on Node.js and supports Linux, Windows, and macOS platforms. Simply install Node.js, configure FortiGate connection info and alert parameters, and you're ready to run. Supports Docker deployment and can also run as a system service."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body class="antialiased">
+
+<header class="sticky top-0 z-40 bg-slate-900/95 backdrop-blur-md border-b border-slate-700">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+    <div class="flex items-center gap-4">
+      <div class="flex items-center gap-2">
+        <div class="flex gap-1">
+          <span class="w-3 h-3 rounded-sm bg-amber-400"></span>
+          <span class="w-3 h-3 rounded-sm bg-emerald-400"></span>
+        </div>
+        <div class="flex gap-0.5">
+          <span class="w-2 h-4 bg-sky-400"></span>
+          <span class="w-2 h-6 bg-sky-500"></span>
+          <span class="w-2 h-5 bg-sky-400"></span>
+        </div>
+      </div>
+      <div class="text-xl font-bold text-white">Network Health Monitor</div>
+    </div>
+    <nav class="hidden md:flex items-center gap-6 text-sm text-slate-300" role="navigation" aria-label="Main navigation">
+      <a href="#why" class="hover:text-emerald-400 transition">Pain Points</a>
+      <a href="#features" class="hover:text-emerald-400 transition">Features</a>
+      <a href="#dashboard" class="hover:text-emerald-400 transition">Dashboard</a>
+      <a href="#architecture" class="hover:text-emerald-400 transition">Architecture</a>
+      <a href="#faq" class="hover:text-emerald-400 transition">FAQ</a>
+      <a href="../index.html" class="text-slate-400 hover:text-white transition" title="Chinese Version">CN</a>
+      <a href="#contact" class="px-4 py-2 border border-emerald-500 text-emerald-400 rounded-md hover:bg-emerald-500/10 transition">Contact Us</a>
+    </nav>
+
+    <button id="menu-btn" class="mobile-menu-btn md:hidden" aria-label="Open navigation menu" aria-expanded="false">
+      <i class="ri-menu-line text-xl text-white"></i>
+    </button>
+
+    <div id="mobile-nav" class="mobile-nav md:hidden text-slate-300 text-sm" role="navigation" aria-label="Mobile navigation">
+      <a href="#why">Pain Points</a>
+      <a href="#features">Features</a>
+      <a href="#dashboard">Dashboard</a>
+      <a href="#architecture">Architecture</a>
+      <a href="#faq">FAQ</a>
+      <a href="../index.html">Chinese</a>
+      <a href="#contact" class="text-emerald-400 font-medium">Contact Us</a>
+    </div>
+
+  </div>
+</header>
+
+<main>
+<!-- Hero Section -->
+<section class="w-full bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900 py-16 lg:py-24">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+    <div data-aos="fade-right" class="order-2 lg:order-1">
+      <div class="badge inline-block animate-slide-in">Enterprise Solution</div>
+      <h1 class="mt-6 text-3xl sm:text-4xl lg:text-5xl font-extrabold hero-gradient leading-tight">
+        FortiGate SD-WAN<br/>Real-time Health Monitor
+      </h1>
+      <p class="mt-6 text-base sm:text-lg text-slate-400 leading-relaxed">
+        All-in-one network quality monitoring platform: Real-time collection of latency, jitter, packet loss metrics &rarr; Intelligent threshold alerts &rarr; Historical data visualization &rarr; Multi-channel notifications via Email/Webhook
+      </p>
+
+      <div class="mt-8 flex flex-col sm:flex-row flex-wrap gap-4">
+        <a href="#contact"
+           class="px-6 py-3 rounded-md bg-emerald-500 text-white shadow-lg hover:bg-emerald-600 transition text-center">
+           Learn More
+        </a>
+        <a href="#dashboard"
+           class="px-6 py-3 rounded-md border border-slate-600 text-slate-300 hover:bg-slate-700/50 transition flex items-center gap-2 justify-center">
+           <i class="ri-eye-line"></i> View Demo
+        </a>
+      </div>
+
+      <div class="mt-10 grid grid-cols-2 sm:grid-cols-4 gap-4 text-center">
+        <div class="stat-card">
+          <div class="text-2xl font-bold text-emerald-400">24/7</div>
+          <div class="text-xs text-slate-500 mt-1">Monitoring</div>
+        </div>
+        <div class="stat-card">
+          <div class="text-2xl font-bold text-sky-400">&lt;1s</div>
+          <div class="text-xs text-slate-500 mt-1">Alert Response</div>
+        </div>
+        <div class="stat-card">
+          <div class="text-2xl font-bold text-amber-400">99.9%</div>
+          <div class="text-xs text-slate-500 mt-1">Availability</div>
+        </div>
+        <div class="stat-card">
+          <div class="text-2xl font-bold text-violet-400">N+</div>
+          <div class="text-xs text-slate-500 mt-1">Multi-Interface</div>
+        </div>
+      </div>
+    </div>
+
+    <div data-aos="fade-left" class="order-1 lg:order-2">
+      <div class="relative">
+        <div class="absolute -inset-4 bg-gradient-to-r from-emerald-500/20 via-sky-500/20 to-violet-500/20 rounded-2xl blur-xl"></div>
+        <img src="../assets/screenshot.png"
+             alt="FortiGate SD-WAN Network Health Monitor Dashboard Screenshot - showing real-time status, latency, packet loss and other metrics"
+             title="Network Health Monitor Real-time Dashboard"
+             width="1200"
+             height="800"
+             loading="eager"
+             fetchpriority="high"
+             class="relative rounded-xl shadow-2xl border border-slate-700 w-full"
+             itemprop="image">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Pain Points Section -->
+<section id="why" class="max-w-7xl mx-auto px-6 py-16" data-aos="fade-up">
+  <h2 class="text-3xl font-semibold text-slate-800 text-center">Why You Need Professional Network Monitoring</h2>
+  <p class="text-slate-600 text-center mt-4 max-w-2xl mx-auto">Traditional network management faces numerous challenges. Our solution helps you address these pain points.</p>
+  <div class="mt-10 grid md:grid-cols-3 gap-6">
+    <div class="card flex items-start gap-4 animate-slide-in">
+      <div class="icon-box bg-rose-50">
+        <i class="ri-wifi-off-line text-2xl text-rose-500"></i>
+      </div>
+      <div>
+        <h3 class="font-medium text-slate-800">Delayed Fault Detection</h3>
+        <p class="mt-2 text-slate-600 text-sm">When SD-WAN links fail or quality degrades, issues are often discovered only after user complaints, affecting business continuity.</p>
+      </div>
+    </div>
+    <div class="card flex items-start gap-4 animate-slide-in">
+      <div class="icon-box bg-amber-50">
+        <i class="ri-bar-chart-box-line text-2xl text-amber-500"></i>
+      </div>
+      <div>
+        <h3 class="font-medium text-slate-800">Lack of Historical Data</h3>
+        <p class="mt-2 text-slate-600 text-sm">Without complete network quality history, it's difficult to analyze trends, locate intermittent issues, or plan capacity.</p>
+      </div>
+    </div>
+    <div class="card flex items-start gap-4 animate-slide-in">
+      <div class="icon-box bg-sky-50">
+        <i class="ri-notification-off-line text-2xl text-sky-500"></i>
+      </div>
+      <div>
+        <h3 class="font-medium text-slate-800">Inadequate Alerting</h3>
+        <p class="mt-2 text-slate-600 text-sm">Native FortiGate alerting has limited capabilities, no custom thresholds, single notification channel, and slow response times.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Features Section -->
+<section id="features" class="max-w-7xl mx-auto px-6 py-16 bg-slate-50 rounded-2xl" data-aos="fade-up">
+  <h2 class="text-3xl font-semibold text-slate-800 text-center mb-4">Core Features</h2>
+  <p class="text-slate-600 text-center mb-10 max-w-2xl mx-auto">Comprehensive network health monitoring capabilities for enterprise network operations</p>
+  <div class="grid lg:grid-cols-2 gap-8">
+    <div class="space-y-6">
+      <div class="card flex items-start gap-4">
+        <div class="icon-box bg-emerald-50">
+          <i class="ri-pulse-line text-2xl text-emerald-600"></i>
+        </div>
+        <div>
+          <h3 class="font-medium text-slate-800">Real-time Health Status Monitoring</h3>
+          <p class="mt-2 text-slate-600 text-sm">Automatically collects FortiGate SD-WAN Health Check data, displaying real-time interface status, latency, jitter, packet loss, and other key metrics.</p>
+        </div>
+      </div>
+      <div class="card flex items-start gap-4">
+        <div class="icon-box bg-sky-50">
+          <i class="ri-speed-line text-2xl text-sky-600"></i>
+        </div>
+        <div>
+          <h3 class="font-medium text-slate-800">Bandwidth Utilization Analysis</h3>
+          <p class="mt-2 text-slate-600 text-sm">Monitor upload/download bandwidth usage for each link, displaying utilization percentages to assist with capacity planning and cost optimization.</p>
+        </div>
+      </div>
+      <div class="card flex items-start gap-4">
+        <div class="icon-box bg-violet-50">
+          <i class="ri-line-chart-line text-2xl text-violet-600"></i>
+        </div>
+        <div>
+          <h3 class="font-medium text-slate-800">Network Quality Trend Charts</h3>
+          <p class="mt-2 text-slate-600 text-sm">Support 6-hour/24-hour/7-day multi-dimensional historical data visualization, quickly identifying network quality fluctuation times and causes.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="space-y-6">
+      <div class="card flex items-start gap-4">
+        <div class="icon-box bg-rose-50">
+          <i class="ri-alarm-warning-line text-2xl text-rose-600"></i>
+        </div>
+        <div>
+          <h3 class="font-medium text-slate-800">Intelligent Threshold Alerts</h3>
+          <p class="mt-2 text-slate-600 text-sm">Customize latency and packet loss alert thresholds. Interface status changes automatically trigger alerts with cooldown support to prevent duplicates.</p>
+        </div>
+      </div>
+      <div class="card flex items-start gap-4">
+        <div class="icon-box bg-amber-50">
+          <i class="ri-mail-send-line text-2xl text-amber-600"></i>
+        </div>
+        <div>
+          <h3 class="font-medium text-slate-800">Multi-channel Notifications</h3>
+          <p class="mt-2 text-slate-600 text-sm">Support Email (SMTP), Microsoft Graph API, Webhook, and other notification methods to ensure alerts are delivered promptly.</p>
+        </div>
+      </div>
+      <div class="card flex items-start gap-4">
+        <div class="icon-box bg-slate-100">
+          <i class="ri-database-2-line text-2xl text-slate-600"></i>
+        </div>
+        <div>
+          <h3 class="font-medium text-slate-800">Persistent Data Storage</h3>
+          <p class="mt-2 text-slate-600 text-sm">Lightweight SQLite-based data storage, fully preserving historical health check data and alert records, supporting data export and analysis.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Dashboard Preview Section -->
+<section id="dashboard" class="max-w-7xl mx-auto px-6 py-16" data-aos="fade-up">
+  <h2 class="text-3xl font-semibold text-slate-800 text-center mb-4">Intuitive Monitoring Dashboard</h2>
+  <p class="text-slate-600 text-center mb-10 max-w-2xl mx-auto">Dark theme design, data at a glance, supports auto-refresh</p>
+
+  <div class="grid lg:grid-cols-3 gap-6 mb-10">
+    <div class="dashboard-feature-card">
+      <div class="flex items-center gap-3 mb-3">
+        <span class="w-3 h-3 rounded-full bg-emerald-400 animate-pulse"></span>
+        <span class="text-slate-700 font-medium">Real-time Status Indicators</span>
+      </div>
+      <p class="text-slate-600 text-sm">Online/offline status updates in real-time. Green indicates normal, red indicates fault. Quickly grasp the overall situation.</p>
+    </div>
+    <div class="dashboard-feature-card">
+      <div class="flex items-center gap-3 mb-3">
+        <i class="ri-dashboard-3-line text-xl text-sky-500"></i>
+        <span class="text-slate-700 font-medium">Multi-metric Cards</span>
+      </div>
+      <p class="text-slate-600 text-sm">Each interface has an independent card displaying latency, packet loss, jitter, session count, bandwidth, and other complete metrics.</p>
+    </div>
+    <div class="dashboard-feature-card">
+      <div class="flex items-center gap-3 mb-3">
+        <i class="ri-refresh-line text-xl text-violet-500"></i>
+        <span class="text-slate-700 font-medium">Auto Refresh</span>
+      </div>
+      <p class="text-slate-600 text-sm">Supports 60-second auto-refresh, data updates in real-time, no manual operation required.</p>
+    </div>
+  </div>
+
+  <div class="relative">
+    <div class="absolute -inset-4 bg-gradient-to-r from-emerald-500/10 via-sky-500/10 to-violet-500/10 rounded-2xl blur-2xl"></div>
+    <img src="../assets/screenshot.png"
+         alt="FortiGate SD-WAN Monitor Dashboard Full Interface - multi-interface status cards, bandwidth utilization charts, historical trend analysis"
+         title="Network Health Monitor Web Interface Preview"
+         width="1200"
+         height="800"
+         loading="lazy"
+         decoding="async"
+         class="relative rounded-xl shadow-xl border border-slate-200 w-full">
+  </div>
+</section>
+
+<!-- Architecture Section -->
+<section id="architecture" class="max-w-7xl mx-auto px-6 py-16 bg-slate-50 rounded-2xl" data-aos="fade-up">
+  <h2 class="text-3xl font-semibold text-slate-800 text-center mb-4">System Architecture</h2>
+  <p class="text-slate-600 text-center mb-10 max-w-2xl mx-auto">Modular design, lightweight deployment, easy to extend</p>
+
+  <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+    <div class="arch-card">
+      <div class="arch-step">1</div>
+      <h4 class="font-medium text-slate-800 mt-4">Data Collection</h4>
+      <p class="mt-2 text-slate-600 text-sm">Uses Playwright to simulate browser login to FortiGate, calling SD-WAN Health Check API to retrieve raw data.</p>
+      <div class="mt-4 flex items-center gap-2 text-xs text-slate-500">
+        <i class="ri-code-s-slash-line"></i>
+        <span>Playwright + Node.js</span>
+      </div>
+    </div>
+    <div class="arch-card">
+      <div class="arch-step">2</div>
+      <h4 class="font-medium text-slate-800 mt-4">Data Storage</h4>
+      <p class="mt-2 text-slate-600 text-sm">Persists health check data and alert records to SQLite database, supporting historical queries and analysis.</p>
+      <div class="mt-4 flex items-center gap-2 text-xs text-slate-500">
+        <i class="ri-database-line"></i>
+        <span>SQLite</span>
+      </div>
+    </div>
+    <div class="arch-card">
+      <div class="arch-step">3</div>
+      <h4 class="font-medium text-slate-800 mt-4">Status Analysis</h4>
+      <p class="mt-2 text-slate-600 text-sm">Real-time comparison of interface status changes, detecting if quality metrics exceed thresholds, intelligently determining if alerts are needed.</p>
+      <div class="mt-4 flex items-center gap-2 text-xs text-slate-500">
+        <i class="ri-cpu-line"></i>
+        <span>State Machine + Threshold Engine</span>
+      </div>
+    </div>
+    <div class="arch-card">
+      <div class="arch-step">4</div>
+      <h4 class="font-medium text-slate-800 mt-4">Alert Notifications</h4>
+      <p class="mt-2 text-slate-600 text-sm">Triggers alerts on status anomalies, supporting Email, Graph API, Webhook, and other multi-channel notifications with built-in cooldown mechanism.</p>
+      <div class="mt-4 flex items-center gap-2 text-xs text-slate-500">
+        <i class="ri-notification-3-line"></i>
+        <span>SMTP / Graph API</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Comparison Section -->
+<section id="comparison" class="max-w-7xl mx-auto px-6 py-16" data-aos="fade-up">
+  <h2 class="text-3xl font-semibold text-slate-800 text-center mb-4">Comparison with Traditional Methods</h2>
+  <p class="text-slate-600 text-center mb-10 max-w-2xl mx-auto">Significant advantages brought by professional monitoring systems</p>
+  <div class="scroll-x">
+    <table class="w-full border-collapse" role="table">
+      <caption class="sr-only">Network Health Monitor vs Traditional Management Comparison Table</caption>
+      <thead>
+        <tr>
+          <th scope="col">Comparison Item</th>
+          <th scope="col">Traditional Method</th>
+          <th scope="col">Network Health Monitor</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Fault Discovery</td>
+          <td class="text-slate-500">Reactive after user complaints</td>
+          <td class="text-emerald-600 font-medium">Real-time monitoring, instant alerts</td>
+        </tr>
+        <tr>
+          <td>Historical Data</td>
+          <td class="text-slate-500">No records or scattered in logs</td>
+          <td class="text-emerald-600 font-medium">Complete storage, trend visualization</td>
+        </tr>
+        <tr>
+          <td>Alert Notifications</td>
+          <td class="text-slate-500">Native FortiGate, limited features</td>
+          <td class="text-emerald-600 font-medium">Multi-channel, custom thresholds, cooldown</td>
+        </tr>
+        <tr>
+          <td>Visualization</td>
+          <td class="text-slate-500">Requires FortiGate login to view</td>
+          <td class="text-emerald-600 font-medium">Independent web interface, access anytime</td>
+        </tr>
+        <tr>
+          <td>Multi-link Management</td>
+          <td class="text-slate-500">Check one by one, inefficient</td>
+          <td class="text-emerald-600 font-medium">Unified view, everything at a glance</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- Tech Stack Section -->
+<section class="max-w-7xl mx-auto px-6 py-16" data-aos="fade-up">
+  <h2 class="text-3xl font-semibold text-slate-800 text-center mb-10">Tech Stack</h2>
+  <div class="flex flex-wrap justify-center gap-6">
+    <div class="tech-badge">
+      <i class="ri-nodejs-fill text-green-600"></i>
+      <span>Node.js</span>
+    </div>
+    <div class="tech-badge">
+      <i class="ri-database-2-fill text-sky-600"></i>
+      <span>SQLite</span>
+    </div>
+    <div class="tech-badge">
+      <i class="ri-chrome-fill text-violet-600"></i>
+      <span>Playwright</span>
+    </div>
+    <div class="tech-badge">
+      <i class="ri-html5-fill text-orange-600"></i>
+      <span>HTML5</span>
+    </div>
+    <div class="tech-badge">
+      <i class="ri-css3-fill text-blue-600"></i>
+      <span>CSS3</span>
+    </div>
+    <div class="tech-badge">
+      <i class="ri-javascript-fill text-yellow-500"></i>
+      <span>JavaScript</span>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ Section - GEO Optimized -->
+<section id="faq" class="max-w-7xl mx-auto px-6 py-16" data-aos="fade-up" itemscope itemtype="https://schema.org/FAQPage">
+  <h2 class="text-3xl font-semibold text-slate-800 text-center mb-4">Frequently Asked Questions</h2>
+  <p class="text-slate-600 text-center mb-10 max-w-2xl mx-auto">Common questions about the FortiGate SD-WAN Network Health Monitor</p>
+
+  <div class="max-w-3xl mx-auto space-y-4">
+    <details class="faq-item group" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" open>
+      <summary class="faq-question cursor-pointer list-none flex items-center justify-between p-4 bg-white rounded-lg border border-slate-200 hover:border-emerald-300 transition">
+        <span itemprop="name" class="font-medium text-slate-800">Why do I need a professional FortiGate SD-WAN monitoring system?</span>
+        <i class="ri-arrow-down-s-line text-xl text-slate-400 group-open:rotate-180 transition-transform"></i>
+      </summary>
+      <div class="faq-answer p-4 bg-slate-50 rounded-b-lg border-x border-b border-slate-200" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+        <div itemprop="text" class="text-slate-600 text-sm leading-relaxed">
+          <p>Traditional network management has three major pain points:</p>
+          <ul class="mt-2 space-y-1 list-disc list-inside">
+            <li><strong>Delayed fault discovery</strong>: When SD-WAN links fail or quality degrades, issues are often discovered only after user complaints</li>
+            <li><strong>Lack of historical data</strong>: Without complete network quality history, it's difficult to analyze trends and locate intermittent issues</li>
+            <li><strong>Limited alerting</strong>: Native FortiGate alerting has limited capabilities, no custom thresholds, and single notification channel</li>
+          </ul>
+          <p class="mt-2">Professional monitoring enables <strong>real-time monitoring, instant alerts, complete historical data storage, and trend visualization</strong>, reducing fault discovery time from hours to seconds.</p>
+        </div>
+      </div>
+    </details>
+
+    <details class="faq-item group" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+      <summary class="faq-question cursor-pointer list-none flex items-center justify-between p-4 bg-white rounded-lg border border-slate-200 hover:border-emerald-300 transition">
+        <span itemprop="name" class="font-medium text-slate-800">What network metrics does the system monitor?</span>
+        <i class="ri-arrow-down-s-line text-xl text-slate-400 group-open:rotate-180 transition-transform"></i>
+      </summary>
+      <div class="faq-answer p-4 bg-slate-50 rounded-b-lg border-x border-b border-slate-200" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+        <div itemprop="text" class="text-slate-600 text-sm leading-relaxed">
+          <p>The system comprehensively monitors all key metrics from FortiGate SD-WAN Health Check:</p>
+          <ul class="mt-2 space-y-1 list-disc list-inside">
+            <li><strong>Latency</strong>: Network round-trip time, reflecting network response speed</li>
+            <li><strong>Jitter</strong>: Degree of latency variation, affecting real-time application quality</li>
+            <li><strong>Packet Loss</strong>: Percentage of lost data packets, directly affecting transmission quality</li>
+            <li><strong>Bandwidth Utilization</strong>: Upload/download bandwidth usage and utilization percentage</li>
+            <li><strong>Interface Status</strong>: Real-time online/offline status monitoring</li>
+            <li><strong>Session Count</strong>: Number of current active connections</li>
+          </ul>
+          <p class="mt-2">All metrics support <strong>customizable alert thresholds</strong>, automatically triggering alerts when metrics exceed set values.</p>
+        </div>
+      </div>
+    </details>
+
+    <details class="faq-item group" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+      <summary class="faq-question cursor-pointer list-none flex items-center justify-between p-4 bg-white rounded-lg border border-slate-200 hover:border-emerald-300 transition">
+        <span itemprop="name" class="font-medium text-slate-800">What alert notification methods are supported?</span>
+        <i class="ri-arrow-down-s-line text-xl text-slate-400 group-open:rotate-180 transition-transform"></i>
+      </summary>
+      <div class="faq-answer p-4 bg-slate-50 rounded-b-lg border-x border-b border-slate-200" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+        <div itemprop="text" class="text-slate-600 text-sm leading-relaxed">
+          <p>The system supports multiple alert notification channels to ensure critical information is delivered promptly:</p>
+          <ul class="mt-2 space-y-1 list-disc list-inside">
+            <li><strong>Email (SMTP)</strong>: Supports Gmail, Outlook, QQ Mail, and other mainstream email services</li>
+            <li><strong>Microsoft Graph API</strong>: Enterprise-grade Microsoft 365 integration</li>
+            <li><strong>Webhook</strong>: Can connect to DingTalk, WeChat Work, Slack, and other collaboration platforms</li>
+          </ul>
+          <p class="mt-2">Built-in <strong>alert cooldown mechanism</strong> (default 5 minutes) prevents repeated alerts for the same issue. Supports <strong>recovery notifications</strong>, automatically sending recovery notices when issues are resolved.</p>
+        </div>
+      </div>
+    </details>
+
+    <details class="faq-item group" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+      <summary class="faq-question cursor-pointer list-none flex items-center justify-between p-4 bg-white rounded-lg border border-slate-200 hover:border-emerald-300 transition">
+        <span itemprop="name" class="font-medium text-slate-800">How do I deploy the Network Health Monitor?</span>
+        <i class="ri-arrow-down-s-line text-xl text-slate-400 group-open:rotate-180 transition-transform"></i>
+      </summary>
+      <div class="faq-answer p-4 bg-slate-50 rounded-b-lg border-x border-b border-slate-200" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+        <div itemprop="text" class="text-slate-600 text-sm leading-relaxed">
+          <p>The system uses lightweight architecture for quick and easy deployment:</p>
+          <ul class="mt-2 space-y-1 list-disc list-inside">
+            <li><strong>Requirements</strong>: Node.js 16+ runtime environment</li>
+            <li><strong>Supported Platforms</strong>: Linux, Windows, macOS</li>
+            <li><strong>Data Storage</strong>: SQLite (zero configuration, no additional database service required)</li>
+            <li><strong>Deployment Methods</strong>: Supports direct execution, PM2 process management, Docker containerized deployment</li>
+          </ul>
+          <p class="mt-2"><strong>Deployment Steps</strong>: Install dependencies &rarr; Configure .env file (FortiGate address, alert settings) &rarr; Initialize database &rarr; Start monitoring service.</p>
+        </div>
+      </div>
+    </details>
+
+    <details class="faq-item group" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+      <summary class="faq-question cursor-pointer list-none flex items-center justify-between p-4 bg-white rounded-lg border border-slate-200 hover:border-emerald-300 transition">
+        <span itemprop="name" class="font-medium text-slate-800">How does the system connect to FortiGate devices?</span>
+        <i class="ri-arrow-down-s-line text-xl text-slate-400 group-open:rotate-180 transition-transform"></i>
+      </summary>
+      <div class="faq-answer p-4 bg-slate-50 rounded-b-lg border-x border-b border-slate-200" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+        <div itemprop="text" class="text-slate-600 text-sm leading-relaxed">
+          <p>The system connects to FortiGate via <strong>Playwright browser automation</strong> technology:</p>
+          <ul class="mt-2 space-y-1 list-disc list-inside">
+            <li>Simulates browser login to FortiGate Web management interface</li>
+            <li>Calls <code class="bg-slate-200 px-1 rounded">/api/v2/monitor/virtual-wan/health-check</code> API to retrieve data</li>
+            <li>Automatically maintains login session, re-authenticates when session expires</li>
+          </ul>
+          <p class="mt-2">The advantage is <strong>no need to enable FortiGate API access permissions</strong>, just provide admin credentials. The system maintains a persistent browser session to avoid frequent logins.</p>
+        </div>
+      </div>
+    </details>
+
+    <details class="faq-item group" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+      <summary class="faq-question cursor-pointer list-none flex items-center justify-between p-4 bg-white rounded-lg border border-slate-200 hover:border-emerald-300 transition">
+        <span itemprop="name" class="font-medium text-slate-800">How long is historical data retained?</span>
+        <i class="ri-arrow-down-s-line text-xl text-slate-400 group-open:rotate-180 transition-transform"></i>
+      </summary>
+      <div class="faq-answer p-4 bg-slate-50 rounded-b-lg border-x border-b border-slate-200" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+        <div itemprop="text" class="text-slate-600 text-sm leading-relaxed">
+          <p>The system uses SQLite database to store all historical data:</p>
+          <ul class="mt-2 space-y-1 list-disc list-inside">
+            <li><strong>Health Check Data</strong>: Retained permanently by default, can be cleaned via scripts</li>
+            <li><strong>Alert Records</strong>: Complete history of all alerts and delivery status</li>
+            <li><strong>Raw JSON Data</strong>: Preserves complete raw data from API responses for subsequent analysis</li>
+          </ul>
+          <p class="mt-2">Web interface supports <strong>6-hour / 24-hour / 7-day</strong> trend chart viewing. Data export supports exporting historical data to CSV or JSON format for offline analysis.</p>
+        </div>
+      </div>
+    </details>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="max-w-7xl mx-auto px-6 py-16 bg-gradient-to-r from-emerald-600 to-sky-600 rounded-2xl text-center" data-aos="fade-up">
+  <h2 class="text-3xl font-semibold text-white mb-6">Get the Solution</h2>
+  <p class="text-emerald-100 mb-8 max-w-xl mx-auto">Our Network Health Monitor can be customized and deployed according to your enterprise needs. Contact us for consultation.</p>
+  <div class="flex flex-col sm:flex-row gap-4 justify-center">
+    <a href="mailto:jason2023zhang@gmail.com" class="px-8 py-4 bg-white text-emerald-600 rounded-md text-lg shadow-lg hover:bg-slate-50 transition inline-flex items-center justify-center gap-2">
+      <i class="ri-mail-line"></i> Email Us
+    </a>
+  </div>
+</section>
+
+</main>
+
+<footer class="bg-slate-900 mt-16">
+  <div class="max-w-7xl mx-auto px-6 py-12 grid sm:grid-cols-2 md:grid-cols-4 gap-8 text-slate-400">
+    <div>
+      <div class="flex items-center gap-2 mb-4">
+        <div class="flex gap-1">
+          <span class="w-3 h-3 rounded-sm bg-amber-400"></span>
+          <span class="w-3 h-3 rounded-sm bg-emerald-400"></span>
+        </div>
+        <span class="text-white font-semibold">Network Health Monitor</span>
+      </div>
+      <p class="text-sm">Enterprise-grade FortiGate SD-WAN health monitoring solution, making network operations simpler and more efficient.</p>
+    </div>
+    <div>
+      <h3 class="font-semibold text-white mb-4">Features</h3>
+      <ul class="space-y-2 text-sm">
+        <li>Real-time Status Monitoring</li>
+        <li>Intelligent Threshold Alerts</li>
+        <li>Historical Trend Analysis</li>
+        <li>Multi-channel Notifications</li>
+      </ul>
+    </div>
+    <div>
+      <h3 class="font-semibold text-white mb-4">Contact</h3>
+      <ul class="space-y-3 text-sm">
+        <li class="flex items-center gap-2">
+          <i class="ri-mail-line text-emerald-400"></i>
+          <a href="mailto:jason2023zhang@gmail.com" class="hover:text-emerald-400 transition">jason2023zhang@gmail.com</a>
+        </li>
+        <li class="flex items-center gap-2">
+          <i class="ri-wechat-line text-emerald-400"></i>
+          <span>winnielove2020</span>
+        </li>
+      </ul>
+    </div>
+    <div>
+      <h3 class="font-semibold text-white mb-4">Follow Us</h3>
+      <div class="flex items-center gap-4 text-2xl mb-4">
+        <a href="https://github.com/junxinzhang/fortigate-sdwan-monitor" target="_blank" class="hover:text-emerald-400 transition" title="GitHub">
+          <i class="ri-github-fill"></i>
+        </a>
+        <a href="https://junxinzhang.com" target="_blank" class="hover:text-emerald-400 transition" title="Blog">
+          <i class="ri-earth-line"></i>
+        </a>
+        <div class="group relative">
+          <i class="ri-wechat-line hover:text-emerald-400 cursor-pointer" title="WeChat"></i>
+          <div class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 w-36 bg-white border border-gray-200 rounded-lg p-2 shadow-lg opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none z-50">
+            <img src="../assets/JustJason_wechat-qrcode.jpg" alt="WeChat QR Code" class="w-full h-auto rounded" />
+            <p class="text-xs text-center text-slate-600 mt-1">Scan to add WeChat</p>
+          </div>
+        </div>
+      </div>
+      <p class="text-xs text-slate-500">Connect for more tech sharing</p>
+    </div>
+  </div>
+  <div class="text-center text-sm text-slate-600 py-4 border-t border-slate-800">
+    &copy; <span id="copyright-year">2025</span> Just Jason. Network Health Monitor. All rights reserved.
+  </div>
+</footer>
+
+<script src="../js/main.js"></script>
+
+</body>
+</html>
