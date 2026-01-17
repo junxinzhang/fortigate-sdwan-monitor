@@ -209,6 +209,34 @@
     ]
   }
   </script>
+
+  <!-- Analytics Preconnect -->
+  <link rel="preconnect" href="https://cloud.umami.is" />
+  <link rel="preconnect" href="https://hm.baidu.com" />
+  <link rel="preconnect" href="https://www.googletagmanager.com" />
+
+  <!-- Umami Analytics -->
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="a852e68b-0f15-41da-acf8-2b1a39a0191c"></script>
+
+  <!-- Baidu Tongji Analytics -->
+  <script>
+  var _hmt = _hmt || [];
+  (function() {
+    var hm = document.createElement("script");
+    hm.src = "https://hm.baidu.com/hm.js?c5f073f07f0dd786e49fc84011075156";
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(hm, s);
+  })();
+  </script>
+
+  <!-- Google Analytics (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-1P2461P9KE"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-1P2461P9KE');
+  </script>
 </head>
 <body class="antialiased">
 
