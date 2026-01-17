@@ -27,6 +27,22 @@ html {
   scroll-behavior: smooth;
 }
 
+/* GPU acceleration for smoother animations */
+header {
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  will-change: transform;
+}
+
+header.scrolled {
+  background-color: rgba(15, 23, 42, 0.98);
+}
+
+/* Content visibility for below-fold content */
+section:not(:first-of-type) {
+  content-visibility: auto;
+  contain-intrinsic-size: 0 500px;
+}
+
 /* Skip to main content link for accessibility */
 .skip-link {
   position: absolute;
