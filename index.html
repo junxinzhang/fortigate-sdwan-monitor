@@ -54,20 +54,25 @@
   <link rel="manifest" href="manifest.json" />
 
   <!-- Preconnect for performance -->
-  <link rel="preconnect" href="https://cdn.tailwindcss.com" />
-  <link rel="preconnect" href="https://cdn.jsdelivr.net" />
-  <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
-  <link rel="dns-prefetch" href="https://cdn.tailwindcss.com" />
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
   <link rel="dns-prefetch" href="https://cdn.jsdelivr.net" />
 
-  <!-- Stylesheets -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+  <!-- Preload critical resources -->
+  <link rel="preload" href="css/critical.css" as="style" />
+  <link rel="preload" href="css/style.css" as="style" />
+  <link rel="preload" href="assets/screenshot.png" as="image" fetchpriority="high" />
+
+  <!-- Critical CSS (replaces Tailwind CDN for faster loading) -->
+  <link rel="stylesheet" href="css/critical.css" />
   <link rel="stylesheet" href="css/style.css" />
 
-  <!-- Scripts -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" defer></script>
+  <!-- Non-critical CSS - load asynchronously -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" /></noscript>
+
+  <!-- AOS CSS - load after page render -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" /></noscript>
 
   <!-- JSON-LD Structured Data -->
   <script type="application/ld+json">
@@ -240,6 +245,15 @@
 </head>
 <body class="antialiased">
 
+<!-- Loading skeleton styles (inline for instant display) -->
+<style>
+.img-skeleton{background:linear-gradient(90deg,#1e293b 25%,#334155 50%,#1e293b 75%);background-size:200% 100%;animation:shimmer 1.5s infinite}
+@keyframes shimmer{0%{background-position:200% 0}100%{background-position:-200% 0}}
+.img-loaded .img-skeleton{display:none}
+.img-wrapper img{opacity:0;transition:opacity .3s ease}
+.img-loaded img{opacity:1}
+</style>
+
 <header class="sticky top-0 z-40 bg-slate-900/95 backdrop-blur-md border-b border-slate-700">
   <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
     <div class="flex items-center gap-4">
@@ -328,15 +342,21 @@
     <div data-aos="fade-left" class="order-1 lg:order-2">
       <div class="relative">
         <div class="absolute -inset-4 bg-gradient-to-r from-emerald-500/20 via-sky-500/20 to-violet-500/20 rounded-2xl blur-xl"></div>
-        <img src="assets/screenshot.png"
-             alt="FortiGate SD-WAN 网络健康监控系统仪表盘界面截图 - 显示实时状态、延迟、丢包率等监控指标"
-             title="网络健康监控中心实时监控仪表盘"
-             width="1200"
-             height="800"
-             loading="eager"
-             fetchpriority="high"
-             class="relative rounded-xl shadow-2xl border border-slate-700 w-full"
-             itemprop="image">
+        <div class="img-wrapper relative" id="hero-img-wrapper">
+          <div class="img-skeleton absolute inset-0 rounded-xl" style="aspect-ratio:3/2"></div>
+          <img src="assets/screenshot.png"
+               alt="FortiGate SD-WAN 网络健康监控系统仪表盘界面截图 - 显示实时状态、延迟、丢包率等监控指标"
+               title="网络健康监控中心实时监控仪表盘"
+               width="1200"
+               height="800"
+               loading="eager"
+               fetchpriority="high"
+               decoding="async"
+               class="relative rounded-xl shadow-2xl border border-slate-700 w-full"
+               style="aspect-ratio:3/2"
+               itemprop="image"
+               onload="this.parentElement.classList.add('img-loaded')">
+        </div>
       </div>
     </div>
   </div>
@@ -475,14 +495,19 @@
 
   <div class="relative">
     <div class="absolute -inset-4 bg-gradient-to-r from-emerald-500/10 via-sky-500/10 to-violet-500/10 rounded-2xl blur-2xl"></div>
-    <img src="assets/screenshot.png"
-         alt="FortiGate SD-WAN 监控仪表盘完整界面 - 多接口状态卡片、带宽利用率图表、历史趋势分析"
-         title="网络健康监控中心 Web 界面预览"
-         width="1200"
-         height="800"
-         loading="lazy"
-         decoding="async"
-         class="relative rounded-xl shadow-xl border border-slate-200 w-full">
+    <div class="img-wrapper relative">
+      <div class="img-skeleton absolute inset-0 rounded-xl bg-slate-200" style="aspect-ratio:3/2"></div>
+      <img src="assets/screenshot.png"
+           alt="FortiGate SD-WAN 监控仪表盘完整界面 - 多接口状态卡片、带宽利用率图表、历史趋势分析"
+           title="网络健康监控中心 Web 界面预览"
+           width="1200"
+           height="800"
+           loading="lazy"
+           decoding="async"
+           class="relative rounded-xl shadow-xl border border-slate-200 w-full"
+           style="aspect-ratio:3/2"
+           onload="this.parentElement.classList.add('img-loaded')">
+    </div>
   </div>
 </section>
 
@@ -786,7 +811,7 @@
         <div class="group relative">
           <i class="ri-wechat-line hover:text-emerald-400 cursor-pointer" title="微信公众号"></i>
           <div class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 w-36 bg-white border border-gray-200 rounded-lg p-2 shadow-lg opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none z-50">
-            <img src="assets/JustJason_wechat-qrcode.jpg" alt="微信公众号二维码" class="w-full h-auto rounded" />
+            <img src="assets/JustJason_wechat-qrcode.jpg" alt="微信公众号二维码" class="w-full h-auto rounded" loading="lazy" decoding="async" width="144" height="144" />
             <p class="text-xs text-center text-slate-600 mt-1">扫码关注公众号</p>
           </div>
         </div>
@@ -799,7 +824,28 @@
   </div>
 </footer>
 
-<script src="js/main.js"></script>
+<!-- Deferred Scripts for better performance -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" defer></script>
+<script src="js/main.js" defer></script>
+
+<!-- Performance metrics -->
+<script>
+// Report Web Vitals
+if ('PerformanceObserver' in window) {
+  // LCP
+  new PerformanceObserver((list) => {
+    const entries = list.getEntries();
+    const lastEntry = entries[entries.length - 1];
+    console.log('LCP:', lastEntry.startTime);
+  }).observe({type: 'largest-contentful-paint', buffered: true});
+  // FID
+  new PerformanceObserver((list) => {
+    list.getEntries().forEach(entry => {
+      console.log('FID:', entry.processingStart - entry.startTime);
+    });
+  }).observe({type: 'first-input', buffered: true});
+}
+</script>
 
 </body>
 </html>
