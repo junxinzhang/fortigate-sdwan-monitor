@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
+  <!-- Homepage -->
+  <url>
+    <loc>https://network-monitor.junxinzhang.com/</loc>
+    <lastmod>2025-01-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://network-monitor.junxinzhang.com/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://network-monitor.junxinzhang.com/"/>
+    <image:image>
+      <image:loc>https://network-monitor.junxinzhang.com/assets/screenshot.png</image:loc>
+      <image:title>FortiGate SD-WAN 网络健康监控系统仪表盘</image:title>
+      <image:caption>企业级网络监控解决方案 - 实时状态监控、智能告警、历史趋势分析</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Section anchors for better crawling -->
+  <url>
+    <loc>https://network-monitor.junxinzhang.com/#why</loc>
+    <lastmod>2025-01-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://network-monitor.junxinzhang.com/#features</loc>
+    <lastmod>2025-01-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://network-monitor.junxinzhang.com/#dashboard</loc>
+    <lastmod>2025-01-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://network-monitor.junxinzhang.com/#architecture</loc>
+    <lastmod>2025-01-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://network-monitor.junxinzhang.com/#faq</loc>
+    <lastmod>2025-01-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://network-monitor.junxinzhang.com/#contact</loc>
+    <lastmod>2025-01-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+</urlset>

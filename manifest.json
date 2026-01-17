@@ -1,0 +1,44 @@
+{
+  "name": "FortiGate SD-WAN 网络健康监控系统",
+  "short_name": "网络监控中心",
+  "description": "企业级 FortiGate SD-WAN 健康监控解决方案：实时状态监控、智能告警、带宽分析、历史趋势可视化。",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0f172a",
+  "theme_color": "#0f172a",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "zh-CN",
+  "categories": ["business", "productivity", "utilities"],
+  "icons": [
+    {
+      "src": "assets/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "assets/favicon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/favicon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "assets/screenshot.png",
+      "sizes": "1200x800",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "网络健康监控中心仪表盘"
+    }
+  ],
+  "related_applications": [],
+  "prefer_related_applications": false
+}
